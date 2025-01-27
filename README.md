@@ -1,2 +1,2 @@
-# client_project_w25
-Client Project - HTML Code Complete Due: Sun Jan 26, 2025 11:59pmDue: Sun Jan 26, 2025 11:59pm
+# Client_Project_Starter_Code
+Starter code for the Fall 2024 & Winter 2025 Client Project
