@@ -1,0 +1,84 @@
+a {
+    color: white;
+    /* 设置超链接的文本颜色为白色 */
+}
+
+header {
+    display: grid;
+    justify-items: center;
+    background-color: #00274C;
+    text-align: center;
+    color: white;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    padding: 10px;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: #EDECEC;
+}
+
+.list-in-body a {
+    color: black; /* 改为黑色 */
+}
+
+.skip {
+    position: absolute;
+    top: -40px;
+    background-color: tomato;
+}
+
+.skip:focus {
+    top: 25px;
+    background-color: white;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main-content h2 {
+    text-align: center;
+    font-weight: bolder;
+    background-color: chocolate;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.main-content article {
+    display: grid;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.main-content article figure {
+    display: grid;
+    justify-content: center;
+}
+
+
+footer {
+    display: grid;
+    justify-content: center;
+    background-color: #00274C;
+    text-align: center;
+    color: white;
+}
+
+.footer-header {
+    color: #FFCB05;
+}
