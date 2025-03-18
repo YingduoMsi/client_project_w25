@@ -3,29 +3,44 @@ a {
     /* 设置超链接的文本颜色为白色 */
 }
 
+img{
+	width: 100%;
+}
+
+.view-all-resource{
+    width: 10%;
+}
+
+h3{
+    font-size: x-large;
+}
+
 header {
-    display: grid;
     justify-items: center;
     background-color: #00274C;
     text-align: center;
     color: white;
+    padding: 50px 0;
 }
+
 
 header nav ul {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     list-style-type: none;
     padding: 10px;
+    grid-gap: 5px;
 }
 
 header nav ul li {
     padding: 10px;
+    background-color: #2F65A7;
+    border-radius: 5px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 10px;
-    padding: 0;
+    padding: 0px;
     background-color: #EDECEC;
 }
 
@@ -36,12 +51,10 @@ body {
 .skip {
     position: absolute;
     top: -40px;
-    background-color: tomato;
 }
 
 .skip:focus {
     top: 25px;
-    background-color: white;
 }
 
 .main-content {
@@ -52,9 +65,13 @@ body {
 .main-content h2 {
     text-align: center;
     font-weight: bolder;
-    background-color: chocolate;
+    background-color: #FFCB05;
     grid-column-start: 1;
     grid-column-end: -1;
+    font-family: 'Oswald', sans-serif;
+    font-size: xx-large;
+    padding: 10px;
+    text-transform: uppercase;
 }
 
 .main-content article {
@@ -63,11 +80,43 @@ body {
     padding: 10px;
     margin: 10px;
     text-align: center;
+    line-height: 2; 
 }
 
 .main-content article figure {
     display: grid;
     justify-content: center;
+}
+
+.top-content{
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.list-in-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #FFCB05;
+    justify-items: stretch;
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+.list-in-body > li{
+    background-color: #ffffff;
+    justify-items: center;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 
@@ -77,6 +126,8 @@ footer {
     background-color: #00274C;
     text-align: center;
     color: white;
+    padding: 50px 0;
+    line-height: 2; 
 }
 
 .footer-header {
