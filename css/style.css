@@ -13,6 +13,12 @@ img {
 
 h3 {
     font-size: x-large;
+    color: black;
+}
+
+h3 a {
+    color: black;
+    /* 改为黑色 */
 }
 
 header {
@@ -21,6 +27,10 @@ header {
     text-align: center;
     color: white;
     padding: 50px 0;
+}
+
+.more a {
+    color: black;
 }
 
 
@@ -220,10 +230,8 @@ canvas {
         }
 
         #home-link {
-            color: rgba(35, 101, 255, 0.488);
-            /* 你可以换成你想要的颜色，比如 blue、#123456 等 */
+            color: #00274C;
             text-decoration: underline;
-            /* 如果想要带下划线 */
         }
 
         canvas {
