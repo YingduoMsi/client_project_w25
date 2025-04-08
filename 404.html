@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <title>Student Success Portal</title>
+</head>
+
+<body>
+
+    <header>
+        <a class="skip" href="#main">Skip to Main content</a>
+        <section class="navbarlogo">
+            <img class="umichlogo" src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="turoring.html">UMSI Tutoring & Academic Support</a></li>
+                    <li><a href="CEW.html">Center for the Education of Women</a></li>
+                    <li><a href="basicNeeds.html">Basic Needs</a></li>
+                </ul>
+            </nav>
+        </section>
+        <h1 class="h1 text">Student Success Portal</h1>
+    </header>
+
+    <main id="main">
+        <div class ="page-not-found">
+            <h2>Oops! Something went wrong.</h2>
+            <h2>We can't find the page you are looking for</h2>
+            <p>It may have been removed, had its name changed, or is temporarily unavailable.</p>
+            <p>Try going back to the <a href="index.html" id="home-link">home page</a> to find what you are looking
+                for.</p>
+        </div>
+        <!-- 加载 GLTFLoader -->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+        <script>
+            let scene, camera, renderer, model, scrollProgress = 0;
+
+            // 初始化场景、相机和渲染器
+            function init() {
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                document.body.appendChild(renderer.domElement);
+
+                // 设置背景颜色为蓝色（0x0000FF）
+                renderer.setClearColor(0xEDECEC, 1);  // 第一参数是颜色值，第二参数是透明度（1表示不透明）
+
+                // 启用阴影
+                renderer.shadowMap.enabled = true;  // 启用阴影映射
+                renderer.shadowMap.type = THREE.PCFSoftShadowMap;  // 设置阴影类型
+
+                document.body.appendChild(renderer.domElement);
+
+                // 创建光源 let there be light
+                let light = new THREE.AmbientLight(0x404040, 2); // 灯光
+                scene.add(light);
+
+                // 创建环境光
+                let ambientLight = new THREE.AmbientLight(0x404040, 2);  // 默认亮度为 1
+                scene.add(ambientLight);
+
+                // 创建点光源
+                let pointLight = new THREE.PointLight(0xffffff, 10, 50);
+                pointLight.position.set(5, 5, 5);  // 设置光源位置
+                scene.add(pointLight);
+
+
+                // 加载 .glb 模型
+                let loader = new THREE.GLTFLoader();
+                loader.load('images/box.glb', function (gltf) {
+                    model = gltf.scene;
+                    scene.add(model);
+                    model.scale.set(2, 2, 2); // 设置模型大小
+                    model.position.set(0, 0, 0); // 设置模型位置
+                });
+
+                // 设置相机位置
+                camera.position.z = 5;
+
+                // 监听滚动事件
+                window.addEventListener('scroll', onScroll);
+
+                animate();
+            }
+
+            // 处理滚动事件
+            function onScroll() {
+                let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                scrollProgress = window.scrollY / scrollHeight;  // 获取滚动进度（0 - 1）
+
+                // 基于滚动进度调整模型旋转
+                if (model) {
+                    model.rotation.y = scrollProgress * Math.PI * 2;  // 滚动时让模型旋转
+                }
+            }
+
+            // 渲染动画
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+            }
+
+            // 初始化
+            init();
+        </script>
+
+    </main>
+
+    <footer>
+        <p class="footer-header">MSI Academic Advising</p>
+        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
+                Advising</a></p>
+        <p>School of Information <br> University of Michigan <br> 105 S State St. <br> Ann Arbor, MI 48109-1285</p>
+        <p>© Copyright <span id="year"></span> Regents of the University of Michigan</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

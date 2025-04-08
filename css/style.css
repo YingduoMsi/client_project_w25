@@ -3,15 +3,15 @@ a {
     /* 设置超链接的文本颜色为白色 */
 }
 
-img{
-	width: 100%;
+img {
+    width: 100%;
 }
 
-.view-all-resource{
+.view-all-resource {
     width: 10%;
 }
 
-h3{
+h3 {
     font-size: x-large;
 }
 
@@ -45,7 +45,8 @@ body {
 }
 
 .list-in-body a {
-    color: black; /* 改为黑色 */
+    color: black;
+    /* 改为黑色 */
 }
 
 .skip {
@@ -80,7 +81,8 @@ body {
     padding: 10px;
     margin: 10px;
     text-align: center;
-    line-height: 2; 
+    line-height: 2;
+    border-radius: 20px;
 }
 
 .main-content article figure {
@@ -88,7 +90,7 @@ body {
     justify-content: center;
 }
 
-.top-content{
+.top-content {
     padding: 10px;
     margin: 10px;
     align-items: center;
@@ -103,7 +105,7 @@ body {
 
 }
 
-.list-in-body{
+.list-in-body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FFCB05;
@@ -112,7 +114,7 @@ body {
     padding: 10px;
 }
 
-.list-in-body > li{
+.list-in-body>li {
     background-color: #ffffff;
     justify-items: center;
     border-radius: 5px;
@@ -127,9 +129,118 @@ footer {
     text-align: center;
     color: white;
     padding: 50px 0;
-    line-height: 2; 
+    line-height: 2;
 }
 
 .footer-header {
     color: #FFCB05;
+}
+
+.page-not-found {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    /* 保持比例 */
+}
+
+
+
+@media (min-width: 900px) {
+    body {
+
+        .navbarlogo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        main {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        header nav ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .umichlogo {
+            width: 5%;
+            height: auto;
+            /* 保持比例 */
+        }
+
+        .item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+            text-align: left;
+
+        }
+
+        .article-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .article-container img {
+            width: 100%;
+            height: auto;
+            /* 保持宽高比例 */
+            display: block;
+            /* 避免图片底部留空 */
+        }
+
+        .article-container_2column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            align-items: center
+        }
+
+        footer {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            line-height: 1;
+            padding: 10px 0;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        #home-link {
+            color: rgba(35, 101, 255, 0.488);
+            /* 你可以换成你想要的颜色，比如 blue、#123456 等 */
+            text-decoration: underline;
+            /* 如果想要带下划线 */
+        }
+
+        canvas {
+            width: 100%;
+            height: auto;
+            /* 保持比例 */
+        }
+
+        page-not-found {
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+
+
+    }
 }

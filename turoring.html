@@ -13,16 +13,18 @@
 <body>
 
     <header>
-        <a class = "skip" href="#main">Skip to Main content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="turoring.html">UMSI Tutoring & Academic Support</a></li>
-                <li><a href="CEW.html">Center for the Education of Women</a></li>
-                <li><a href="basicNeeds.html">Basic Needs</a></li>
-            </ul>
-        </nav>
+        <a class="skip" href="#main">Skip to Main content</a>
+        <section class="navbarlogo">
+            <img class="umichlogo" src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="turoring.html">UMSI Tutoring & Academic Support</a></li>
+                    <li><a href="CEW.html">Center for the Education of Women</a></li>
+                    <li><a href="basicNeeds.html">Basic Needs</a></li>
+                </ul>
+            </nav>
+        </section>
         <h1 class="h1 text">UMSI Tutoring & Academic Support</h1>
 
     </header>
@@ -53,7 +55,7 @@
         <section class="main-content">
             <h2>Useful Links</h2>
             <p>Check out these links below. You might find them useful. </p>
-            <ul class = "list-in-body">
+            <ul class="list-in-body">
                 <li><a href="https://sites.google.com/umich.edu/umsitutoring/home/faqs-umsi-peer-tutoring">FAQ's UMSI
                         Peer Tutoring</a></li>
                 <li><a href="https://sites.google.com/umich.edu/umsitutoring/umsi-programming-tutoring">UMSI Programming
@@ -62,7 +64,7 @@
                 </li>
             </ul>
             <p>Additional Academic Support</p>
-            <ul class = "list-in-body">
+            <ul class="list-in-body">
                 <li><a
                         href="https://sites.google.com/umich.edu/umsitutoring/additional-academic-support/peer-to-peer-tutor-directory">Peer
                         to Peer Tutor Directory</a></li>
@@ -74,14 +76,15 @@
     </main>
     <footer>
         <p class="footer-header">MSI Academic Advising</p>
-        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
+        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
+                Advising</a></p>
         <p>School of Information <br>
             University of Michigan <br>
             105 S State St. <br>
             Ann Arbor, MI 48109-1285</p>
-        <p>© Copyright 2025 Regents of the University of Michigan</p>
+        <p>© Copyright <span id="year"></span> Regents of the University of Michigan</p>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
